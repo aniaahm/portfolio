@@ -505,8 +505,11 @@
       box-shadow: var(--shadow-paper);
     }
 
+    /* Editing Gallery Cards */
     .edit-phone-mockup {
-      aspect-ratio: 9/16;
+      position: relative;
+      width: 100%;
+      aspect-ratio: 9 / 16; /* Default for 9:16 videos (MY NICHES, Edit 001) */
       background: var(--color-charcoal);
       border-radius: 12px;
       border: 2px solid var(--color-charcoal);
@@ -514,27 +517,30 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--color-cream);
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      position: relative;
       overflow: hidden;
     }
 
-    .edit-phone-mockup img {
+    .edit-phone-mockup video {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      display: block;
     }
-/* Aspect ratio overrides for specific edits */
-#edit-002,
-#edit-004 {
-  aspect-ratio: 1 / 1;
-}
 
-#edit-003 {
-  aspect-ratio: 4 / 3;
-}
+    /* Specific Aspect Ratios requested */
+    #edit-000,
+    #edit-001 {
+      aspect-ratio: 9 / 16 !important;
+    }
+
+    #edit-002,
+    #edit-004 {
+      aspect-ratio: 1 / 1 !important;
+    }
+
+    #edit-003 {
+      aspect-ratio: 4 / 3 !important;
+    }
     /* ==========================================================================
        9. DIGITAL PROJECTS / PP.N0TE LIBRARY
        ========================================================================== */
@@ -872,69 +878,70 @@
   </div>
 
   <div class="edits-grid">
-    <!-- Edit 0 -->
+    <!-- Edit 0: MY NICHES (9:16 Aspect Ratio) -->
     <div class="edit-card">
-  <a href="https://www.instagram.com/reel/DdCe-T2TBe2/" target="_blank" rel="noopener noreferrer">
-    <div class="edit-phone-mockup">
-      <video autoplay loop muted playsinline>
-        <source src="videos/edit-000.mp4" type="video/mp4" />
-      </video>
+      <a href="https://www.instagram.com/reel/DdCe-T2TBe2/" target="_blank" rel="noopener noreferrer">
+        <div class="edit-phone-mockup" id="edit-000">
+          <video autoplay loop muted playsinline>
+            <source src="videos/edit-000.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </a>
+      <h4 style="font-family: var(--font-heading); margin-top: 0.5rem;">MY NICHES</h4>
+      <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-charcoal-muted);">get to know pp.n0te</p>
     </div>
-  </a>
-  <h4 style="font-family: var(--font-heading); margin-top: 0.5rem;">MY NICHES</h4>
-  <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-charcoal-muted);">get to know pp.n0te</p>
-</div>
-    <!-- Edit 1 -->
+
+    <!-- Edit 1 (9:16 Aspect Ratio) -->
     <div class="edit-card">
-  <a href="https://www.instagram.com/reel/DcUVyReTwTM/" target="_blank" rel="noopener noreferrer">
-    <div class="edit-phone-mockup">
-      <video autoplay loop muted playsinline>
-        <source src="videos/edit-001.mp4" type="video/mp4" />
-      </video>
+      <a href="https://www.instagram.com/reel/DcUVyReTwTM/" target="_blank" rel="noopener noreferrer">
+        <div class="edit-phone-mockup" id="edit-001">
+          <video autoplay loop muted playsinline>
+            <source src="videos/edit-001.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </a>
+      <h4 style="font-family: var(--font-heading); margin-top: 0.5rem;">EDIT 001</h4>
+      <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-charcoal-muted);">Short-form Content Edit</p>
     </div>
-  </a>
-  <h4 style="font-family: var(--font-heading); margin-top: 0.5rem;">EDIT 001</h4>
-  <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-charcoal-muted);">Short-form Content Edit</p>
-</div>
-    <!-- Edit 2 -->
-<div class="edit-card">
-  <a href="https://www.instagram.com/reel/DbIANX7RSAD/" target="_blank" rel="noopener noreferrer">
-    <div class="edit-phone-mockup" id="edit-002"> <!-- ADDED id="edit-002" -->
-      <video autoplay loop muted playsinline>
-        <source src="videos/edit-002.mp4" type="video/mp4" />
-      </video>
-    </div>
-  </a>
-  <h4 style="font-family: var(--font-heading); margin-top: 0.5rem;">EDIT 002</h4>
-  <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-charcoal-muted);">Fan Edit / Timing & Beat Sync</p>
-</div>
 
-<!-- Edit 3 -->
-<div class="edit-card">
-  <a href="https://www.instagram.com/p/DYM5nZBxIwJ/" target="_blank" rel="noopener noreferrer">
-    <div class="edit-phone-mockup" id="edit-003"> <!-- ADDED id="edit-003" -->
-      <video autoplay loop muted playsinline>
-        <source src="videos/edit-003.mp4" type="video/mp4" />
-      </video>
+    <!-- Edit 2 (1:1 Aspect Ratio) -->
+    <div class="edit-card">
+      <a href="https://www.instagram.com/reel/DbIANX7RSAD/" target="_blank" rel="noopener noreferrer">
+        <div class="edit-phone-mockup" id="edit-002">
+          <video autoplay loop muted playsinline>
+            <source src="videos/edit-002.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </a>
+      <h4 style="font-family: var(--font-heading); margin-top: 0.5rem;">EDIT 002</h4>
+      <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-charcoal-muted);">Fan Edit / Timing & Beat Sync</p>
     </div>
-  </a>
-  <h4 style="font-family: var(--font-heading); margin-top: 0.5rem;">EDIT 003</h4>
-  <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-charcoal-muted);">Fan Edit / Typography edit</p>
-</div>
 
-<!-- Edit 4 -->
-<div class="edit-card">
-  <a href="https://www.instagram.com/p/C-L_P28ShNd/" target="_blank" rel="noopener noreferrer">
-    <div class="edit-phone-mockup" id="edit-004"> <!-- ADDED id="edit-004" -->
-      <video autoplay loop muted playsinline>
-        <source src="videos/edit-004.mp4" type="video/mp4" />
-      </video>
+    <!-- Edit 3 (4:3 Aspect Ratio) -->
+    <div class="edit-card">
+      <a href="https://www.instagram.com/p/DYM5nZBxIwJ/" target="_blank" rel="noopener noreferrer">
+        <div class="edit-phone-mockup" id="edit-003">
+          <video autoplay loop muted playsinline>
+            <source src="videos/edit-003.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </a>
+      <h4 style="font-family: var(--font-heading); margin-top: 0.5rem;">EDIT 003</h4>
+      <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-charcoal-muted);">Fan Edit / Typography edit</p>
     </div>
-  </a>
-  <h4 style="font-family: var(--font-heading); margin-top: 0.5rem;">EDIT 004</h4>
-  <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-charcoal-muted);">Fan Edit / Transitions+lyrics</p>
-</div>
-    
+
+    <!-- Edit 4 (1:1 Aspect Ratio) -->
+    <div class="edit-card">
+      <a href="https://www.instagram.com/p/C-L_P28ShNd/" target="_blank" rel="noopener noreferrer">
+        <div class="edit-phone-mockup" id="edit-004">
+          <video autoplay loop muted playsinline>
+            <source src="videos/edit-004.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </a>
+      <h4 style="font-family: var(--font-heading); margin-top: 0.5rem;">EDIT 004</h4>
+      <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-charcoal-muted);">Fan Edit / Transitions+lyrics</p>
+    </div>
   </div>
 </section>
 
